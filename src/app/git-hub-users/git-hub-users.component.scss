@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  input {
+    background-color: #ffffff61;
+    border: 1px solid;
+    border-color: whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 5rem;
+    width: 40vw;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.4s;
+
+    &:focus-visible{
+      outline: none;
+      border-color: gray;
+    }
+  }
+}

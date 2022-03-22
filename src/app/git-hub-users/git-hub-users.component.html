@@ -1,0 +1,7 @@
+<div class="container">
+  <input (keyup)="getInfo($event)" placeholder="Search for githib users" />
+  <app-single-git-hub-user
+    *ngFor="let user of users$ | async"
+    [user]="user"
+  ></app-single-git-hub-user>
+</div>
