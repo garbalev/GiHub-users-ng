@@ -3,5 +3,8 @@
     <img [src]="user.avatar_url" />
     <span>{{ user.login }}</span>
   </div>
-  <a [href]="user.html_url" target="_blank">Open GitHub</a>
+  <div class="cardButtons">
+    <a [href]="user.html_url" target="_blank">Open GitHub</a>
+    <a [href]="" target="_blank" class="repos">Repos</a>
+  </div>
 </div>
