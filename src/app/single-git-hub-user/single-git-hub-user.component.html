@@ -5,6 +5,6 @@
   </div>
   <div class="cardButtons">
     <a [href]="user.html_url" target="_blank">Open GitHub</a>
-    <a [href]="" target="_blank" class="repos">Repos</a>
+    <a routerLink="./repos/{{user.login}}" class="repos" (click)="getRepos()">Repos</a>
   </div>
 </div>

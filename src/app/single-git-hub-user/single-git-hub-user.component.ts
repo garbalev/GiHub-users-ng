@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from '../shared/gh-users.service';
+import { GhUsersService, User } from '../shared/gh-users.service';
 
 @Component({
   selector: 'app-single-git-hub-user',
@@ -9,7 +9,15 @@ import { User } from '../shared/gh-users.service';
 
 export class SingleGitHubUserComponent implements OnInit {
   @Input() user!: User;
-  constructor() {}
+  constructor(private gitHubUsersService: GhUsersService) {}
+
+  // repos$ = this.gitHubUsersService.getRepos(this.user.login).subscribe();
 
   ngOnInit(): void {}
+
+  getRepos() {
+    let val:string = this.user.login
+    // console.log(val)
+    // this.gitHubUsersService.newUsers(val)
+  }
 }
