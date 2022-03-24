@@ -1,14 +1,18 @@
 <div *ngIf="repos$ | async as repos" class="repoContainer">
-  <h3>
-    <span>{{ repos[0].owner.login }}'s</span> repos
-  </h3>
-
-  <div *ngFor="let repo of repos; index as i">
-    <span class="repoIndex"> {{ i + 1 }}) </span>
-    <a [href]="repo.html_url" target="_blank">
-      {{ repo.name }}
-    </a>
-    <br>
-    <span class="dateOfBirth">Date Of Birth: {{ repo.created_at | date: 'medium'}}</span>
+  <p>
+    <strong>{{ repos[0].owner.login }}'s</strong> repos
+  </p>
+  <div *ngFor="let repo of repos; index as i" class="eachRepo">
+    <div class="repoBlock">
+      <strong> {{ i + 1 }}) </strong>
+      <div class="repoBlockInfo">
+        <strong>{{ repo.name }}</strong>
+        <span class="dateOfBirth">
+          Date Of Birth:
+          {{ repo.created_at | date: "medium" }}
+        </span>
+      </div>
+    </div>
+    <a [href]="repo.html_url" target="_blank"> Open </a>
   </div>
 </div>

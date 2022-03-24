@@ -1,28 +1,39 @@
 .repoContainer {
-  h3 {
+  p {
     text-align: center;
-
-      span {
-        border-bottom: 1px black solid;
-      }
+    font-size: 18px;
   }
 
-  div {
+  .eachRepo {
     border: 1px grey solid;
+    border-radius: 5px;
     margin-bottom: 1rem;
     padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .repoIndex {
-      font-weight: 600;
+    .repoBlock {
+      display: flex;
+
+      .repoBlockInfo {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5rem;
+      }
     }
 
     a {
       text-decoration: none;
       color: black;
-    }
+      border: 1px solid;
+      border-radius: 6px;
+      padding: 1px 2px;
+      background-color: #4343431f;
 
-    .dateOfBirth {
-
+      &:hover {
+        background-color: #e3cece;
+      }
     }
   }
 }
