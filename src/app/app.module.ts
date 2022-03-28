@@ -9,7 +9,6 @@ import { GitHubUserReposComponent } from './git-hub-user-repos/git-hub-user-repo
 import { GitHubUsersComponent } from './git-hub-users/git-hub-users.component';
 import { SingleGitHubUserComponent } from './single-git-hub-user/single-git-hub-user.component';
 
-
 @NgModule({
   declarations: [AppComponent, GitHubUsersComponent, SingleGitHubUserComponent, GitHubUserReposComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],

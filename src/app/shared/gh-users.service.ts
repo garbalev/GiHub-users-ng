@@ -51,6 +51,6 @@ export class GhUsersService {
   }
 
   findRepos(login: string): Observable<any> {
-    return this.http.get(`https://api.github.com/users/${login}/repos`);
+    return this.http.get(`https://api.github.com/users/${login}/repos?&per_page=100`);
   }
 }

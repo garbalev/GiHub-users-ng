@@ -1,13 +1,23 @@
-<div *ngIf="repos$ | async as repos" class="repoContainer">
+<div *ngIf="repositories" class="repoContainer">
   <p>
-    <strong>{{ repos[0].owner.login }}'s</strong> repos
+    <strong>{{ repositories[0].owner.login }}'s</strong> repositories
   </p>
-  <div *ngFor="let repo of repos; index as i" class="eachRepo">
+  <a
+    (click)="sortByDate()"
+    [innerHTML]="'sort by date ' + fromSmallerToLargerDate"
+    [ngClass]="toggleActiveDate"
+  ></a>
+  <a
+    (click)="sortAlphabetically()"
+    [innerHTML]="'sort by def ' + fromSmallerToLargerLetter"
+    [ngClass]="toggleActiveLetter"
+  ></a>
+  <div *ngFor="let repo of repositories; index as i" class="eachRepo">
     <div class="repoBlock">
       <strong> {{ i + 1 }}) </strong>
       <div class="repoBlockInfo">
-        <strong>{{ repo.name }}</strong>
-        <span class="dateOfBirth">
+        <strong>{{ repo.name }}</strong
+        ><span class="dateOfBirth">
           Date Of Birth:
           {{ repo.created_at | date: "medium" }}
         </span>
